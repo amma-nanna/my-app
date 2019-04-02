@@ -3,7 +3,7 @@
      git 'https://github.com/javahometech/my-app'
    }
    stage('Compile-Package'){
-     sh "${mvnhome}/bin/mvn package"
+     sh "/opt/mavan/apache-maven-3.6.0/bin/mvn package"
    }
    stage('deploy to tomcat'){
      sshagent(['tomcat']) {
